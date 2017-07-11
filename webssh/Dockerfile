@@ -9,4 +9,6 @@ RUN yum install -y epel-release
 RUN yum install -y shellinabox
 RUN /usr/sbin/useradd centos && echo 'centos:wayout'|chpasswd && echo 'root:wayout'|chpasswd && usermod -s /bin/bash centos
 
+EXPOSE 3306 4200
+
 CMD /usr/bin/supervisord
